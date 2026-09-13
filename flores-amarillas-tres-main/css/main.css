@@ -20,29 +20,37 @@ body {
   perspective: 1000px;
 }
 
+/* --- POSICIONAMIENTO EN LA PARTE SUPERIOR --- */
 #lyrics {
+  position: absolute;
+  top: 8vh; /* Distancia desde el borde superior */
+  left: 50%;
+  transform: translateX(-50%); /* Centrado horizontal perfecto */
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  z-index: 100;
+  
   font-size: 28px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: white;
-  position: absolute;
-  margin-bottom: 20%;
-  z-index: 1;
+  color: #ffffff;
   font-weight: bold;
   letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Mejora la legibilidad */
 }
-@media only screen and (max-width: 600px) {
-  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
-  #lyrics {
-      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
-      margin-bottom: 530px;
-      letter-spacing: 3px;
-  }
 
+/* Ajuste responsivo para celulares */
+@media only screen and (max-width: 600px) {
+  #lyrics {
+    top: 5vh; /* Se sube un poco más en pantallas pequeñas */
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
 }
 .titulo {
   margin-bottom: 180px;
   font-family: "Arial Narrow", Arial, sans-serif;
-  color: rgb(251, 254, 251);
+  color: yellow;
   position: absolute;
   font-weight: bold;
   letter-spacing: 10px;
