@@ -21,22 +21,33 @@ body {
 }
 
 /* --- POSICIONAMIENTO EN LA PARTE SUPERIOR --- */
-#lyrics {
+.titulo {
   position: absolute;
-  top: 8vh; /* Distancia desde el borde superior */
+  top: 5vh; /* Se fija cerca del borde superior */
   left: 50%;
-  transform: translateX(-50%); /* Centrado horizontal perfecto */
+  transform: translateX(-50%); /* Centrado horizontal */
   width: 90%;
   max-width: 800px;
-  text-align: center;
-  z-index: 100;
   
-  font-size: 28px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #ffffff;
+  margin-bottom: 0; /* Se remueve el margen inferior que causaba interferencia */
+  text-align: center;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  color: yellow;
   font-weight: bold;
-  letter-spacing: 4px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Mejora la legibilidad */
+  letter-spacing: 10px;
+  z-index: 200; /* Asegura que quede visible en el plano superior */
+  
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+/* Ajuste de tamaño y espacio para pantallas móviles */
+@media only screen and (max-width: 600px) {
+  .titulo {
+    top: 3vh;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
 }
 
 /* Ajuste responsivo para celulares */
